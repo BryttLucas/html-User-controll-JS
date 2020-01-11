@@ -1,12 +1,12 @@
-const getUrlParms =()=> {
+const getUrlParms = () => {
     // parse the URL
     let url = document.URL;
     let parms = url.split("?")[1];
     let kvs = parms.split("&");
-    let json ={};
+    let json = {};
     for(let kv of kvs) {
         let keyValue = kv.split("=");
-        json[keyValue[0]]= keyValue[1];
+        json[keyValue[0]]=keyValue[1];
     }
-    console.log(json);
+    return json;
 }
